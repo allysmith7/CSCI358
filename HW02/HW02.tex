@@ -1,0 +1,150 @@
+
+%=============================================================================
+\documentclass[12pt]{article}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{pifont}
+
+%=============================================================================
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\oddsidemargin} {-0.25in}
+\setlength{\textwidth}     {+7.00in}
+\setlength{\topmargin}     {+0.00in}
+\setlength{\textheight}    {+8.50in}
+%=============================================================================
+\makeatletter
+\@addtoreset{equation}{section}
+\makeatother
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\baselinestretch}{1.2}
+\normalsize
+%==============================x===============================================
+
+%==============================================================================
+\pagestyle{plain}
+%
+\date{}
+\begin{document}
+%==============================================================================
+\begin{flushleft}
+\large \bf
+Homework 2 \\
+\end{flushleft}
+%==============================================================================
+{\bf
+Please note that you have to typeset your assignment (using \LaTeX, Word, etc).
+Hand-written assignments will not be graded.
+You should submit a \underline{pdf version} to Gradescope by 23:59 on September 10th. Be careful not to move questions or swap their numbers when using this template.
+}
+
+\begin{enumerate}
+
+\item ($12 \times 2$)
+Prove the following using equivalence laws:
+
+\begin{enumerate}
+\item
+$(A \to \lnot C) \lor (B \to \lnot C) \equiv (A \land B) \to \lnot C$
+%==============================================================================
+% Write your answer here
+
+$(A \to \lnot C) \lor (B \to \lnot C) \equiv (\lnot A \lor \lnot C) \lor (\lnot B \lor \lnot C)$
+
+$(\lnot A \lor \lnot C) \lor (\lnot B \lor \lnot C) \equiv \lnot A \lor \lnot B \lor \lnot C$
+
+$\lnot A \lor \lnot B \lor \lnot C \equiv \lnot(A \land B) \lor \lnot C$
+
+$\lnot(A \land B) \lor \lnot C \equiv (A \land B) \to \lnot C$
+
+%==============================================================================
+\clearpage
+\item
+$\lnot (\lnot A \lor B) \to  \lnot (A \to B)$ is a tautology
+%==============================================================================
+% Write your answer here
+
+$\lnot (\lnot A \lor B) \equiv \lnot (A \to B)$
+
+$\lnot (A \to B) \to \lnot (A \to B)$
+
+$\lnot(\lnot (A \to B)) \lor \lnot (A \to B)$
+
+$ (A \to B)) \lor \lnot (A \to B)$
+
+Let $P \equiv A \to B$
+
+$P \lor \lnot P$
+
+This is always true.
+
+%==============================================================================
+\clearpage
+\end{enumerate}
+
+\item ($12$)
+Simplify the following formula as much as possible (resulting in an \textbf{equivalent} formula with as few letters as possible): $(A \lor \lnot (B \land A)) \land \lnot(\lnot A \land B) \land (\lnot B \lor \lnot C)$
+%==============================================================================
+% Write your answer here
+
+
+%==============================================================================
+\clearpage
+
+\item ($12$)
+Guilty or innocent? Please complete the argument, translate it into a logical expression, and prove it valid. \\
+
+If the suspect is guilty, then the knife was in the drawer. Either the knife was not in the drawer or Jason Pritchard saw the knife. If the knife was not there on October 10, it follows that Jason Pritchard didn’t see the knife. Furthermore, if the knife was there on October 10, then the knife was in the drawer and also the hammer was not in the barn. But we all know that the hammer was in the barn. Therefore, the suspect is  \underline{\hbox to 40mm{}}.
+
+%=============================================================================================
+%  Write your answer here
+
+%=============================================================================================
+\clearpage
+(If you cannot finish Question 3 in page 4, continue on this page.)
+\clearpage
+
+\item ($13 \times 4$)
+Use propositional logic to prove that the following arguments are valid:
+
+\begin{enumerate}
+
+\item
+$(A \to \lnot C) \land (\lnot C \to \lnot B) \land B \to \lnot A$
+%==============================================================================
+% Write your answer here
+
+
+%==============================================================================
+\clearpage
+\item
+$(A \to \lnot B) \land (A \to (\lnot B \to C)) \to (A \to C)$
+%==============================================================================
+% Write your answer here
+
+
+%==============================================================================
+\clearpage
+\item
+$A \land (B \lor \lnot C) \to (A \land B) \lor (A \land \lnot C)$
+%==============================================================================
+% Write your answer here
+
+
+%==============================================================================
+\clearpage
+\item
+$\lnot (\lnot A \lor B) \land (\lnot B \to C) \to (A \land C)$
+%==============================================================================
+% Write your answer here
+
+
+%==============================================================================
+\clearpage
+
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
