@@ -274,3 +274,6 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# Ignore the .DS_Store file
+.DS_Store
