@@ -110,17 +110,27 @@ $B \to (A \land \lnot C)$
 \item ($12$)
 Guilty or innocent? Please complete the argument, translate it into a logical expression, and prove it valid. \\
 
-If the suspect is guilty, then the knife was in the drawer. Either the knife was not in the drawer or Jason Pritchard saw the knife. If the knife was not there on October 10, it follows that Jason Pritchard didn’t see the knife. Furthermore, if the knife was there on October 10, then the knife was in the drawer and also the hammer was not in the barn. But we all know that the hammer was in the barn. Therefore, the suspect is  \underline{\hbox to 40mm{}}.
+If the suspect is guilty, then the knife was in the drawer. Either the knife was not in the drawer or Jason Pritchard saw the knife. If the knife was not there on October 10, it follows that Jason Pritchard didn’t see the knife. Furthermore, if the knife was there on October 10, then the knife was in the drawer and also the hammer was not in the barn. But we all know that the hammer was in the barn. Therefore, the suspect is  \textbf{INNOCENT.}
 
 %=============================================================================================
 %  Write your answer here
-$(G \to D) \land (\lnot D \lor J) \land (\lnot K \to \lnot J) \land (K \to (D \land H)$
-
-$(G \to D) \land (\lnot D \lor J) \land (\lnot K \to \lnot J) \land (K \to (D \land T)$
-
-$(G \to D) \land (\lnot D \lor J) \land (\lnot K \to \lnot J) \land (K \to D)$
-
-$(G \to D) \land (D \to J) \land (J \to K) \land (K \to D)$
+\begin{enumerate}
+\begin{enumerate}
+	\item $G \to D$
+	\item $\lnot D \lor J$
+	\item $\lnot K \to \lnot J$
+	\item $K \to (D \land \lnot H)$
+	\item $H$
+	\item $(\lnot D \lor H) \to \lnot K$\hfill(iv, Implication Law \& DeMorgan's Law)
+	\item $\lnot J \to \lnot D$\hfill(ii, Implication)
+	\item $\lnot D \to \lnot G$\hfill(i, Implication)
+	\item $\lnot D \lor H$\hfill(v)
+	\item $\lnot K$\hfill(vi, ix)
+	\item $\lnot J$\hfill(iii, x)
+	\item $\lnot D$\hfill(vii, xi)
+	\item $\lnot G$\hfill(viii, xii)
+\end{enumerate}
+\end{enumerate}
 
 %=============================================================================================
 \clearpage
@@ -140,8 +150,8 @@ $(A \to \lnot C) \land (\lnot C \to \lnot B) \land B \to \lnot A$
 	\item $B$
 	\item $(\lnot C \to \lnot) \equiv (B \to C)$\hfill(Implication Law)
 	\item $(A \to \lnot C) \equiv (C \to \lnot A)$\hfill(Implication Law)
-	\item $C$\hfill(3, 4)
-	\item $\lnot A$\hfill(5, 6)
+	\item $C$\hfill(iii, iv)
+	\item $\lnot A$\hfill(v, vi)
 \end{enumerate}
 
 
@@ -149,8 +159,19 @@ $(A \to \lnot C) \land (\lnot C \to \lnot B) \land B \to \lnot A$
 \clearpage
 \item
 $(A \to \lnot B) \land (A \to (\lnot B \to C)) \to (A \to C)$
+
+$\equiv (A \to \lnot B) \land (A \to (\lnot B \to C)) \land A \to C$
 %==============================================================================
 % Write your answer here
+
+\begin{enumerate}
+	\item $A \to \lnot B$
+	\item $A \to (\lnot B \to C)$
+	\item $A$
+	\item $\lnot B \to C$\hfill(ii, iii)
+	\item $\lnot B$\hfill(i, iii)
+	\item $C$\hfill(iv, v)
+\end{enumerate}
 
 
 %==============================================================================
@@ -160,6 +181,15 @@ $A \land (B \lor \lnot C) \to (A \land B) \lor (A \land \lnot C)$
 %==============================================================================
 % Write your answer here
 
+$\equiv A \land (B \lor \lnot C) \to A \land (B \lor \lnot C)$\hfill(Reverse Distributive Law)
+
+$\equiv (A \land (B \lor \lnot C)) \lor \lnot(A \land (B \lor \lnot C))$\hfill(Implication Law)
+
+Let $P \equiv (A \land (B \lor \lnot C))$
+
+$P \lor \lnot P$
+
+This is a tautology.
 
 %==============================================================================
 \clearpage
@@ -167,7 +197,15 @@ $A \land (B \lor \lnot C) \to (A \land B) \lor (A \land \lnot C)$
 $\lnot (\lnot A \lor B) \land (\lnot B \to C) \to (A \land C)$
 %==============================================================================
 % Write your answer here
-
+\begin{enumerate}
+	\item $\lnot(\lnot A \lor B)$
+	\item $\lnot B \to C$
+	\item $A \land \lnot B$\hfill(DeMorgan's Law)
+	\item $\lnot B$\hfill(iii)
+	\item $A$\hfill(iii)
+	\item $C$\hfill(ii, iv)
+	\item $A \land C$\hfill(v, vi)
+\end{enumerate}
 
 %==============================================================================
 \clearpage
