@@ -1,0 +1,194 @@
+%=============================================================================
+\documentclass[12pt]{article}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage{float}
+
+%=============================================================================
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\oddsidemargin} {-0.25in}
+\setlength{\textwidth}     {+7.00in}
+\setlength{\topmargin}     {+0.00in}
+\setlength{\textheight}    {+8.50in}
+%=============================================================================
+\makeatletter
+\@addtoreset{equation}{section}
+\makeatother
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\baselinestretch}{1.2}
+\normalsize
+%==============================x===============================================
+
+%==============================================================================
+\pagestyle{plain}
+%
+\date{}
+\begin{document}
+%==============================================================================
+\begin{flushleft}
+\large \bf
+Homework 3 \\
+\end{flushleft}
+%==============================================================================
+%{\bf
+%Please note that you have to typeset your assignment using
+%either \LaTeX~or Microsoft Word.
+%%
+%Hand-written assignment will not be graded.
+%%
+%You need to submit a \underline{hardcopy} and a \underline{pdf version} on Canvas at the beginning of the lecture on February 8.
+%%You also need to submit an \underline{electronic version} to the blackboard.
+%%
+%%For the electronic version, you should name your file using the format {\bf CSCI598-HW01-LastName-FirstName}.
+%}
+
+{\bf
+	Please note that handwritten assignments will not be graded. To fill out your homework, use either the Latex template or the Word template (filled out in Word or another text editor). Please do not alter the order or the spacing of questions (keep them on their own pages).
+	%
+	You should submit a \underline{pdf} version to Gradescope by 23:59 on September 22.
+	%
+	When you submit to Gradescope, please indicate which pages of your submitted pdf contain the answers to each question. If you have any questions about the templates or submission process, you can reach out to the TAs on Piazza.
+}
+
+\begin{enumerate}
+
+
+\item ($6 \times 4$)
+Translate each of these statements into logical expressions using predicates, quantifiers, and logical connectives. The domain is all animals.
+
+\begin{enumerate}
+\item
+All lions are predators
+
+
+\item
+Some lions roar.
+
+\item
+Only lions roar.
+
+\item
+Some lions eat all zebras.
+\end{enumerate}
+
+{\bf Solution:}\\
+%answer the questions here:
+$\forall x (L(x) \to P(x))$
+
+$\exists x (L(x) \land R(x))$
+
+$\exists x (R(x) \to L(x))$
+
+$\exists x \forall y E(x,y)$
+\newpage
+
+%=============================================================================================
+%  Write your answer here
+
+
+%=============================================================================================
+
+\item ($5 \times 2$)
+Translate each of these mathematical statements into logical expressions.
+
+\begin{enumerate}
+
+\item
+The square root of an integer greater than 1 is also greater than 1.
+
+{\bf Solution:}
+
+$\forall x ((x > 1) \to (\sqrt{x} > 1))$
+\item
+The summation of two negative integers is always negative.
+
+{\bf Solution:}
+%answer the questions here:
+
+$\forall x \forall y ((x < 0) \land (y < 0) \to (x + y) < 0)$
+\newpage
+
+
+\end{enumerate}
+
+\item ($6 \times 5$)
+Translate each of these logical expressions into English. Let $M(x)$ denote ``x is a man". Let $W(x)$ denote ``x is a woman". Let $W(x,y)$ denote ``x works for y". Let $i$ denote Ivan and $p$ denote Peter.
+\begin{enumerate}
+
+\item
+$\exists x(W(x) \land \forall y (M(y) \to \lnot W(x,y)))$
+
+{\bf Solution:}
+
+There exists a person x such that if x is a woman and for all other people y, for any other person, the other person is a man, then the woman does not work for the man.
+
+\item
+$\forall x (M(x)\to \exists y (W(y) \land W(x,y)))$
+
+{\bf Solution:}
+
+For all persons x, if x is a man then there exists a person y such that y is a woman and the man works for the woman.
+
+\item
+$\forall x (M(x) \to \forall y (W(x,y) \to W(y)) )$
+
+{\bf Solution:}
+
+For any person x, if x is a man then there exists a person y such that if x works for y, then y must be a woman.
+
+\item
+$\forall x \forall y (M(x) \land W(y,x) \to W(y))$
+
+{\bf Solution:}
+
+For all people x and for all people y, if x is a man and y works for x, then y must be a woman.
+
+\item
+$W(i,p) \land \forall x (W(p,x) \to \lnot W(x))$
+
+{\bf Solution:}
+
+Ivan works for Peter and for all people x, if Peter works for x then x is not a woman.
+
+\end{enumerate}
+
+
+
+\newpage
+
+\item ($12 \times 3$)
+Prove that each of the following formula is a valid argument using a sequence of equivalence laws and inference rules.
+\begin{enumerate}
+
+\item
+$\forall x P(x) \land \exists x Q(x) \to \exists x(P(x) \land Q(x))$
+
+{\bf Solution:}
+
+%answer the questions here:
+\newpage
+
+\item
+$\forall x \forall y Q(x,y) \to \forall y \forall x Q(x,y)$
+
+{\bf Solution:}
+%answer the questions here:
+\newpage
+
+\item
+$\forall x P(x) \to \forall x(P(x) \lor Q(x))$
+
+{\bf Solution:}
+%answer the questions here:
+\newpage
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
+%==============================================================================
