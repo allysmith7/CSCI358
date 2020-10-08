@@ -168,8 +168,17 @@ Prove that each of the following formula is a valid argument using a sequence of
 $\forall x P(x) \land \exists x Q(x) \to \exists x(P(x) \land Q(x))$
 
 {\bf Solution:}
-
 %answer the questions here:
+
+\begin{enumerate}
+	\item $\forall xP(x)$
+	\item $\exists xQ(x)$
+	\item $P(c)$\hfill(i, UI)
+	\item $Q(a)$\hfill(ii, EI)
+	\item $P(c) \land Q(a)$\hfill(iii, iv)
+	\item $\exists x(P(x) \land Q(x))$\hfill(v, EG)
+\end{enumerate}
+
 \newpage
 
 \item
@@ -177,6 +186,13 @@ $\forall x \forall y Q(x,y) \to \forall y \forall x Q(x,y)$
 
 {\bf Solution:}
 %answer the questions here:
+
+\begin{enumerate}
+	\item $\forall x \forall y Q(x,y)$
+	\item $\forall x Q(x, c)$\hfill(i, UI)
+	\item $\forall y Q(c,y)$\hfill(i, UI)
+	\item $\forall y \forall x Q(x,y)$\hfill(ii, iii, UG)
+\end{enumerate}
 \newpage
 
 \item
@@ -184,6 +200,13 @@ $\forall x P(x) \to \forall x(P(x) \lor Q(x))$
 
 {\bf Solution:}
 %answer the questions here:
+
+\begin{enumerate}
+	\item $\forall xP(x)$
+	\item $P(c)$\hfill(i, UI)
+	\item $P(c) \lor Q(c)$\hfill(ii, Inference Rule)
+	\item $\forall x(P(x) \lor Q(x))$\hfill(UG)
+\end{enumerate}
 \newpage
 
 \end{enumerate}

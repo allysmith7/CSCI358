@@ -1,0 +1,269 @@
+%=============================================================================
+\documentclass[12pt]{article}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[caption=false]{subfig}
+%=============================================================================
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\oddsidemargin} {-0.25in}
+\setlength{\textwidth}     {+7.00in}
+\setlength{\topmargin}     {+0.00in}
+\setlength{\textheight}    {+8.50in}
+%=============================================================================
+\makeatletter
+\renewcommand{\baselinestretch}{1.2}
+\normalsize
+%=============================================================================
+
+%==============================================================================
+\pagestyle{plain}
+%
+\date{}
+\begin{document}
+%==============================================================================
+\begin{flushleft}
+\large \bf
+Homework 4 \\
+\end{flushleft}
+%==============================================================================
+{\bf
+Please note that handwritten assignments will not be graded. To fill out your homework, use either the Latex template or the Word template (filled out in Word or another text editor). Please do not alter the order or the spacing of questions (keep them on their own pages). When you submit to Gradescope, please indicate which pages of your submitted pdf contain the answers to each question. If you have any questions about the templates or submission process, you can reach out to the TAs on Piazza.
+}
+
+\begin{enumerate}
+
+	\item ($4 \times 2$)
+		Provide a counterexample to each of the following statements:
+	\begin{enumerate}
+		\item
+		Every geometric figure with four right angles is a square.
+		\item
+		If a real number is not positive, then it must be negative.
+		\item
+	   For each odd natural number $n$, if $n>3$, then 3 divides $(n^2-1)$.
+		\item
+		The number $n$ is an even integer if and only if $3n+2$ is an even integer.
+	\end{enumerate}
+	%==============================================================
+	{\bf Solution:}
+	%answer the questions here:
+	\begin{enumerate}
+		\item A rectangle is a figure that has four 90 degree angles, but is not always a square.
+		\item Zero is the only number that is neither positive or negative.
+		\item For $n = 9$, $9^2 = 81$, $81 - 1 = 80$, which is not divisible by three.
+		\item For $n = \frac{2}{3}$, $3n + 2 = 4$, but $\frac{2}{3}$ is not an even integer.
+	\end{enumerate}
+
+
+	\newpage
+
+	\item (8)
+	What is wrong with the proof?
+
+	Claim: If $a$ and $b$ are two equal real numbers, then $a = 0$.
+
+	Proof:
+	\begin{eqnarray}
+	a &=& b \\
+	a^2 &=& ab \\
+	a^2 - b^2 &=& ab - b^2	\\
+	(a-b)(a+b) &=& (a-b)b \\
+	a + b &=& b \\
+	a &=& 0
+	\end{eqnarray}
+	%==============================================================
+	{\bf Solution:}
+	%answer the questions here:
+
+	Because we are assuming that $a = b$, then $(a - b) = 0$, which means that we cannot divide by this quantity going from step 4 to step 5.
+
+	\newpage
+	\item ($4 \times 8$)
+	Prove each of the following statements:
+	\begin{enumerate}
+		\item
+		The square of an even number is divisible by 4.\\
+		%==============================================================
+		{\bf Solution:}
+		%answer the questions here:
+
+		\begin{enumerate}
+			\item Assume that $n$ is even, so $n = 2k$, where $k \in \mathbb{Z}$
+			\item $n^2 = (2k)^2 = 4k^2$
+			\item $\frac{4k^2}{4} = k^2$
+		\end{enumerate}
+		Therefore, for any even number $n$, $n^2$ is evenly divisible by 4.
+
+		\newpage
+		\item
+		If $n$ is an even integer, then $n^2 - 1$ is odd.\\
+		%==============================================================
+		{\bf Solution:}
+		%answer the questions here:
+
+		\begin{enumerate}
+			\item Assume that $n$ is an even integer, so $n = 2k$, where $k \in \mathbb{Z}$
+			\item $n^2 - 1$
+			\item $(2k)^2 - 1$
+			\item $4k^2 - 1$
+		\end{enumerate}
+		Because k is an integer, $4k^2 - 1$ must be odd.
+
+		\newpage
+		\item
+		The sum of an integer and its square is even.\\
+		%==============================================================
+		{\bf Solution:}
+		%answer the questions here:
+
+
+		\begin{enumerate}
+			\item Let $n \in \mathbb{Z}$
+			\item $n^2 + n$
+			\item $n(n + 1)$
+		\end{enumerate}
+		Given this, either $n$ or $n + 1$ must be even, so their product will be even as well.
+
+		\newpage
+		\item
+		For any two numbers $x$ and $y$, $|x + y| \leq |x| + |y|$.\\
+		%==============================================================
+		{\bf Solution:}
+		%answer the questions here:
+
+		There are three cases: both positive, both negative, and one of each.
+
+		Both positive:
+		\begin{enumerate}
+			\item Let $x \in \mathbb{Z}^+$, $y \in \mathbb{Z}^+$
+			\item $|x + y|= |x| + |y|$
+			\item $|x + y| \leq |x| + |y|$
+		\end{enumerate}
+
+		Both negative:
+		\begin{enumerate}
+			\item Let $x \in \mathbb{Z}^-$, $y \in \mathbb{Z}^-$
+			\item $|x + y| = |x| + |y|$
+			\item $|x + y| \leq |x| + |y|$
+		\end{enumerate}
+
+		One of each:
+		\begin{enumerate}
+			\item Let $x \in \mathbb{Z}^+$, $y \in \mathbb{Z}^-$
+			\item $|x + y| = |x| - |y| < |x| + |y|$
+			\item $|x + y| \leq |x| + |y|$
+		\end{enumerate}
+
+		\newpage
+
+	\end{enumerate}
+
+	\item ($12+12+12+16$) Prove each of the following statements using induction or strong induction:
+	\begin{enumerate}
+
+		\item
+		$1^2 + 2^2 + 3^2 +...+ n^2 = \frac{n(n+1)(2n+1)}{6}$ for any positive integer $n$.\\
+		%==============================================================
+		{\bf Solution:}\\
+		%answer the questions here:
+
+		Let $n \in \mathbb{N}^+$, $f(x)$ be $1^2 + 2^2 + 3^2 +...+ n^2 = \frac{n(n+1)(2n+1)}{6}$
+		\begin{enumerate}
+			\item $f(1)$ is $1^2 = \frac{(1)(2)(2(1)+1)}{6} = \frac{6}{6} = 1$
+			\item $f(n)$ is $1^2 + 2^2 + 3^2 +...+ n^2 = \frac{n(n+1)(2n+1)}{6}$
+			\item $f(n + 1)$ is $1^2 + 2^2 + 3^2 +...+ n^2 + (n+1)^2 = \frac{(n+1)(n+2)(2(n+1)+1)}{6}$
+			\item $f(n + 1)$ is $f(n) + (n+1)^2 = \frac{(n+1)(n+2)(2n+3)}{6}$
+			\item $f(n + 1)$ is $\frac{n(n+1)(2n+1)}{6} + (n+1)^2 = \frac{(n+1)(n+2)(2n+3)}{6}$
+			\item $(n+1)^2 = \frac{(n+1)(n+2)(2n+3)}{6} - \frac{n(n+1)(2n+1)}{6}$
+			\item $(n+1)^2 = \frac{(n+1)(n+2)(2n+3)-n(n+1)(2n+1)}{6}$
+			\item $(n+1)^2 = \frac{6n^2+12n+6}{6}$
+			\item $(n+1)^2 = n^2+2n+1$
+			\item $(n+1)^2 = (n+1)^2$
+		\end{enumerate}
+
+		Therefore, for any $n \in \mathbb{N}^+$, $1^2 + 2^2 + 3^2 +...+ n^2 = \frac{n(n+1)(2n+1)}{6}$
+
+		\newpage
+		\item
+		$3^{2n} + 7$ is divisible by 8 for any positive integer $n$.\\
+		%==============================================================
+		{\bf Solution:}\\
+		%answer the questions here:
+
+		Let $n \in \mathbb{N}^+$, $f(x) = \frac{3^{2x} + 7}{8}$, $P(n)$ be $n \in \mathbb{Z}$, $\frac{3^{2n} + 7}{8} \in \mathbb{Z}$
+		\begin{enumerate}
+			\item $f(1) = \frac{3^2+7}{8} = \frac{16}{8} = 2$
+			\item $f(n) = \frac{3^{2n}+7}{8} \in \mathbb{Z}$
+			\item $f(n+1) = \frac{3^{2(n+1)}+7}{8}$
+			\item $\frac{3^{2n+2}+7}{8}$
+			\item $\frac{9(3^{2n})+7}{8}$
+			\item $\frac{(8+1)(3^{2n})+7}{8}$
+			\item $\frac{8(3^{2n})+7}{8}+\frac{3^{2n}+7}{8}$
+			\item $\frac{8(3^{2n})+7}{8}+f(n)$
+		\end{enumerate}
+
+		Both terms are divisible by 8, so $f(n+1)$ is always divisble by 8. Therefore, we have proven the theorem.
+
+		\newpage
+		\item
+		$3 + 6 + 9 +...+ 3n = \frac{3n(n+1)}{2}$ for any positive integer $n$.\\
+		%==============================================================
+		{\bf Solution:}\\
+		%answer the questions here:
+
+		Let $n \in \mathbb{N}^+$, $f(x) = 3 + 6 + 9 + ... + 3n$, $P(x)$ be $\frac{3n(n+1)}{2} = f(x)$
+		\begin{enumerate}
+			\item $f(1) = 3 = \frac{3(1)(1+1)}{2}$
+			\item $f(n) = \frac{3n(n+1)}{2}$
+			\item $f(n+1) = \frac{3(n+1)(n+2)}{2} = f(n) + 3(n+1)$
+			\item $\frac{3(n+1)(n+2)}{2} = \frac{3n(n+1)}{2} + 3(n+1)$
+			\item $\frac{3(n+1)(n+2)}{2} - \frac{3n(n+1)}{2} = 3(n+1)$
+			\item $\frac{6(n+1)}{2} = 3(n+1)$
+			\item $3(n+1) = 3(n+1)$
+		\end{enumerate}
+
+		Therefore, for any $n \in \mathbb{N}^+$, $3 + 6 + 9 +...+ 3n = \frac{3n(n+1)}{2}$
+
+		\newpage
+		\item
+		Let $a_n$ be the sequence defined by $a_1 = 1$, $a_2 = 1$, $a_n = a_{n-1} + a_{n-2}$ for $n \geq 3$. Prove that $a_n \geq (\frac{3}{2})^{n-2}$ 	for any positive integer $n$
+		%==============================================================
+
+		{\bf Solution:}\\
+		%answer the questions here:
+		Let $f(x) = a_x$, $P(x)$ is $a_r \geq (\frac{3}{2})^{r-2}$, where $1 \leq r \leq k$, $k \geq 3$
+		\begin{enumerate}
+			\item $f(3) = a_3 = a_2 + a_1 = 1 + 1 = 2$
+			\item $f(k) = a_k = a_{k-1} + a_{k-2}$, $a_k \geq (\frac{3}{2})^{k-2}$
+			\item $f(k+1) = a_{k+1} = a_k + a_{k-1}$, $a_{k+1} \geq (\frac{3}{2})^{k-1}$
+			\item $(\frac{3}{2})^{k-3} + (\frac{3}{2})^{k-4} \geq (\frac{3}{2})^{k-2}$
+			\item $(\frac{3}{2})^{k-2}(\frac{3}{2})^{-1} + (\frac{3}{2})^{k-2}(\frac{3}{2})^{-2} \geq (\frac{3}{2})^{k-2}$
+			\item $(\frac{3}{2})^{k-2} \times (\frac{3}{2}^{-1}+\frac{3}{2}^{-2}) \geq (\frac{3}{2})^{k-2}$
+			\item $(\frac{3}{2})^{k-2} \times (\frac{10}{9}) \geq (\frac{3}{2})^{k-2}$
+		\end{enumerate}
+
+		Therefore, for any $n \in \mathbb{N}^+$, $a_n \geq (\frac{3}{2})^{n-2}$
+
+		\newpage
+	\end{enumerate}
+
+
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+%==============================================================================
