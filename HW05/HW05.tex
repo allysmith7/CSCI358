@@ -1,0 +1,204 @@
+%=============================================================================
+\documentclass[12pt]{article}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[caption=false]{subfig}
+
+
+%=============================================================================
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\oddsidemargin} {-0.25in}
+\setlength{\textwidth}     {+7.00in}
+\setlength{\topmargin}     {+0.00in}
+\setlength{\textheight}    {+8.50in}
+%=============================================================================
+\makeatletter
+\renewcommand{\baselinestretch}{1.2}
+\normalsize
+%=============================================================================
+
+%==============================================================================
+\pagestyle{plain}
+%
+\date{}
+\begin{document}
+	%==============================================================================
+	\begin{flushleft}
+		\large \bf
+		Homework 5 \\
+	\end{flushleft}
+	%==============================================================================
+{\bf
+Please note that handwritten assignments will not be graded. To fill out your homework, use either the Latex template or the Word template (filled out in Word or another text editor). Please do not alter the order or the spacing of questions (keep them on their own pages). When you submit to Gradescope, please indicate which pages of your submitted pdf contain the answers to each question. If you have any questions about the templates or submission process, you can reach out to the TAs on Piazza. This assignment is due at 23:59 on Oct 20th.
+}
+
+
+\begin{enumerate}
+
+
+		\item ($3 \times 5$)
+		Answer the following questions about sets:
+		\begin{enumerate}
+			\item
+			Let $S = \{2, 5, 17, 27\}$. Which of the following expressions are true?
+
+			a. $5 \in S$ \quad\quad b. $2 + 5 \in S$ \quad\quad c. $\varnothing \in S$ \quad\quad d. $S \in S$
+
+			\textbf{a}
+
+			\item
+			How many different sets are described  in the following? What are they?
+			\begin{multicols}{2}
+				$\{2, 3, 4\} $
+
+				\hangindent=1cm $\{x \mid x$ is the first letter of cat, bat, \\or apple$\}$
+
+				$\{x \mid x \in \mathbb{N} \text{ and } 2 \leq x \leq 4\}$
+
+				$\{a, b, c\}$
+
+				$\varnothing $
+
+				\hangindent=1cm $\{x \mid x$ is the first letter of cat, bat, \\and apple$\}$
+
+				$\{2, a, 3, b, 4, c\}$
+
+				$\{3, 4, 2\}$
+			\end{multicols}
+
+			\textbf{4}
+			\item
+			Describe each of the following sets by listing its elements:
+
+			a. $\{x \mid x \in \mathbb{N} \text{ and } x^2 -5x +6 = 0\}$
+
+			$\{2, 3\}$
+
+			b. $\{x \mid x \in \mathbb{R} \text{ and } x^2 = 7\}$
+
+			$\{\pm\sqrt{7}\}$
+
+			c. $\{x \mid x \in \mathbb{N} \text{ and } x^2 -2x -8 = 0\}$
+
+			$\{-2, 4\}$
+			\clearpage
+		\end{enumerate}
+
+
+		\item ($8$)	Prove that if $A \subseteq B$ and $B \subseteq C$, then $A \subseteq C$.
+	%	==================================
+		%  Write your answer here
+		\\Proof:
+
+		\begin{enumerate}
+			\begin{enumerate}
+				\item Assume $\forall x(x \in A)$.
+				\item $(x \in A) \to (x \in B)$\hfill(Definition of Subset)
+				\item $x \in B$\hfill(i, ii)
+				\item $(x \in B) \to (x \in C)$\hfill(Definition of Subset)
+				\item $x \in C$\hfill(iii, iv)
+				\item $(x \in A) \to (x \in C)$
+				\item $A \subseteq C$\hfill(vi, Definition of Subset)
+			\end{enumerate}
+		\end{enumerate}
+		%===================================
+		\clearpage
+
+
+		\item ($2 \times 5$) Find the following power sets:
+		\begin{enumerate}
+			\item
+			Find  $2^S$ for $S = \{a\}$.
+
+			$\{\varnothing, \{a\}\}$
+
+			\item
+			Find  $2^S$ for $S = \{\varnothing\}$.
+
+			$\{\varnothing\}$
+
+		\end{enumerate}
+		\clearpage
+
+
+
+		\item ($5 \times 6$)
+		Let
+		\begin{align*}
+		\centering
+		A &= \{p, q, r, s\}\\
+		B &= \{r, t, v\}\\
+		C &= \{p, s, t, u\}
+		\end{align*}
+		be subsets of $S = \{p, q, r, s, t, u, v, w\}$. Find
+		\begin{multicols}{3}
+			a. $B \cap C$
+
+			b. $A \cup C$
+
+			c. $C^{\prime}$
+
+			d. $A \times B$
+
+			e. $\left(A \cup B\right) \cap C^{\prime}$
+				%==================================
+			%  Write your answer here
+		\\	Answers:
+
+		\begin{enumerate}
+			\item $\{t\}$
+			\item $\{p, q, r, s, t, u\}$
+			\item $\{q, r, v, w\}$
+			\item $\{(p, r), (p, t), (p, v), (q, r), (q, t), (q, v), (r, r), (r, t), (r, v), (s, r), (s, t), (s, v)\}$
+			\item $\{q, r, v\}$
+		\end{enumerate}
+			%===================================
+			\clearpage
+		\end{multicols}
+
+
+		\item ($4 \times 6$)
+		Which of the following can be false? If the statement can be false, provide a counterexample. If it is true, you do not need to provide an example.
+
+		a. $\left(A \cap B\right)^{\prime} = A^{\prime} \cap B^{\prime}$
+
+		b. $A - B = \left(B - A\right)^{\prime}$
+
+		c. $B \times A = A \times B$
+
+		d. $\left(A - B\right) \cup \left(B - C\right) = A - C$
+		%==================================
+		%  Write your answer here
+		\\Answers:
+
+
+		Let $A = \{4, 5, 6\}, B = \{6, 7, 8\}, C = \{8, 9, 10\}$, which are all subsets of $S = \{4, 5, 6, 7, 8, 9, 10\}$
+		\begin{enumerate}
+			\item False, $(A \cap B)^{\prime} = \{4, 5, 7, 8, 9, 10\} \neq A^{\prime} \cap B^{\prime} = \{9, 10\}$
+			\item False, $A - B = \{4, 5, 6\} \neq (B - A)^{\prime} = \{4, 5, 9, 10\}$
+			\item False, $B \times A = \{(6,4), (6,5), (6,6), (7,4), (7,5), (7,6), (8,4), (8,5), (8,6)\} \neq A \times B = \{(4,6), (4,7), (4,8), (5,6), (5,7), (5,8), (6,6), (6,7), (6,8)\}$
+			\item False
+			\begin{enumerate}
+				\item $A - B = \{4,5\}$
+				\item $B - C = \{6,7\}$
+				\item $(A - B) \cup (B - C) = \{4,5,6,7\}$
+				\item $A - C = \{4,5,6\}$
+				\item $(A - B) \cup (B - C) \neq A - C$
+			\end{enumerate}
+		\end{enumerate}
+		%===================================
+		\clearpage
+		\item ($13$) Prove that if $\left(A - B\right) \cup \left(B - A\right) = A \cup B$, then $A \cap B = \varnothing$. \\
+
+		%==================================
+		%  Write your answer here
+		Proof:
+		%===================================
+	\end{enumerate}
+\end{document}
+%==============================================================================
