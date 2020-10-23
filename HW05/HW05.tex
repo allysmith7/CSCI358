@@ -198,7 +198,20 @@ Please note that handwritten assignments will not be graded. To fill out your ho
 		%==================================
 		%  Write your answer here
 		Proof:
-		%===================================
+
+		Assume there is an $x$ such that $x \in A \cap B$.
+
+		Therefore, $x \in A$ and $x \in B$ can be assumed to be true as well.
+
+		From this, we can assume that $x \in A \cup B = (A - B) \cup (B - A)$.
+
+		Because $x$ is in the union of the two sets, then it must be in one, maybe both.
+
+		Therefore, $x \in (A - B)$ or $x \in (B - A)$.
+
+		However, this cannot be true, as if $x \in (A - B)$, then $x \notin B$ must be true, which contradicts $x \in A \cap B$.
+
+		Therefore, the statement must be true.
 	\end{enumerate}
 \end{document}
 %==============================================================================
