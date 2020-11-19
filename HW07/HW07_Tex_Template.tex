@@ -1,0 +1,139 @@
+
+%=============================================================================
+\documentclass[12pt]{article}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage[caption=false]{subfig}
+\usepackage{enumerate}
+
+%=============================================================================
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\oddsidemargin} {-0.25in}
+\setlength{\textwidth}     {+7.00in}
+\setlength{\topmargin}     {+0.00in}
+\setlength{\textheight}    {+8.50in}
+%=============================================================================
+\makeatletter
+\renewcommand{\baselinestretch}{1.2}
+\normalsize
+%=============================================================================
+
+%==============================================================================
+\pagestyle{plain}
+%
+\date{}
+\begin{document}
+	%==============================================================================
+	\begin{flushleft}
+		\large \bf
+		Homework 7 \\
+	\end{flushleft}
+	%==============================================================================
+{\bf
+Please note that handwritten assignments will not be graded. To fill out your homework, use either the Latex template or the Word template (filled out in Word or another text editor). Please do not alter the order or the spacing of questions (keep them on their own pages). When you submit to Gradescope, please indicate which pages of your submitted pdf contain the answers to each question. If you have any questions about the templates or submission process, you can reach out to the TAs on Piazza. This assignment is due at 23:59 on November 17th.
+}
+
+	\begin{enumerate}
+
+		\item ($5 \times 2$)
+		\begin{enumerate}[a.]
+			\item
+			A user's password to access a computer system consists of three letters (only lowercase) followed by two numbers (each between 0 and 9). How many different passwords are possible?
+
+			$26^3 \times 10^2 = 1,757,600$ passwords
+
+			\item
+			How many three-digit numbers less than 600 can be made using the digits 8, 6, 4, and 2 at most once?
+
+			$2 \times 3 \times 2 = 12$
+		\end{enumerate}
+
+	\newpage
+
+		\item ($10 + 15$)
+		\begin{enumerate}[a.]
+			\item
+			In the set of three-digit integers $\left( \right.$numbers between 100 and 999 inclusive$\left. \right)$.
+			\begin{enumerate}
+				\item  How many are divisible by 4?
+
+				$\frac{900}{4} = 225$
+
+				\item  How many are divisible by 4 or 5?
+
+				Using the method from above, I found that there are $180$ numbers that are divisible by $5$ in the range, and $45$ divisible by $4$ and $5$. Therefore, there are $225 + 180 - 45 = 360$ numbers in the range divisible by 4 or 5.
+
+				360
+
+			\end{enumerate}
+			\item
+			In the set of binary strings of length 8 $\left( \right.$each character is either 0 or 1$\left. \right)$.
+			\begin{enumerate}
+				\item How many begin and end with 0?
+
+				Since each character has a $\frac{1}{2}$ chance of being a $0$, $\frac{1}{2} \times \frac{1}{2} = \frac{1}{4}$ of them start and end with $0$.
+
+				\item How many begin or end with 0?
+
+				Since $\frac{1}{4}$ of them begin and end with a $1$, $\frac{3}{4}$ must begin or end with a $0$.
+
+				\item How many contain two or more 0s?
+
+				$2^8 - 9 = 247$
+			\end{enumerate}
+		\end{enumerate}
+
+		\newpage
+
+		\item ($10 \times 3$)
+		Concern a hand consisting of 1 card drawn from a standard 52-card deck with flowers on the back and 1 card drawn from a standard 52-card deck with birds on the back. A standard deck has 13 cards from each of 4 suits $\left( \right.$clubs, diamonds, hearts, spades$\left. \right)$. The 13 cards have face value 2 through 10, jack, queen, king, or ace. Each face value is a ``kind" of card. The jack, queen, and king are ``face cards."
+		\begin{enumerate}[a.]
+			\item How many hands consists of a pair of aces?
+
+			$4 \times 4 = 16$ of the hands.
+
+			\item How many hands contain all face cards?
+
+			$16 \times 16 = 256$
+
+			\item How many hands contain at least one face card?
+
+			$16 \times 52 + 52 \times 16 - 16 \times 16 = 1408$
+		\end{enumerate}
+
+			\newpage
+
+		\item ($10 \times 2$)
+		Among a bank's 214 customers with checking or savings accounts, 189 have checking accounts, 73 have regular savings accounts, 114 have money market savings accounts, and 69 have both checking and regular savings accounts. No customer is allowed to have both regular savings and money market savings accounts.
+		\begin{enumerate}[a.]
+			\item
+			How many customers have both checking and money market savings accounts?
+
+			93 people
+			\item
+			How many customers have a checking account but no savings account?
+
+			27 people
+		\end{enumerate}
+
+
+			\newpage
+		\item ($5 + 10$) Use pigeonhole principle to prove the following (need to identify pigeons/objects and pigeonholes/boxes):
+
+		\begin{enumerate}[a.]
+			\item
+			How many cards must be drawn from a standard 52-card deck to guarantee 2 cards of the same suit? Note that there are 4 suits.
+
+			The ``pidgeonholes'' are the suits and the ``pidgeons'' are the cards. In the worst case, you can draw one of each suit before you repeat, so the maximum number of cards would be $5$.
+			\item
+			Prove that if four numbers are chosen from the set $\{1, 2, 3, 4, 5, 6\}$, at least one pair must add up to 7. %(Hint: Consider all pairs of numbers from the set that add to 7.)
+
+			The ``pigeonholes'' each represent one of three pairs of numbers, and the ``pigeons'' are the numbers that are drawn. Since each number in the set has an cooresponding element that sums with it to $7$, and there are 3 pigeonholes, there must be at least one pair once you have filled the pigeonholes with four different numbers.
+		\end{enumerate}
+
+	\end{enumerate}
+\end{document}
+%==============================================================================
