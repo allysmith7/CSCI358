@@ -1,0 +1,129 @@
+%=============================================================================
+\documentclass[12pt]{article}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage[caption=false]{subfig}
+\usepackage{enumerate}
+
+%=============================================================================
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\oddsidemargin} {-0.25in}
+\setlength{\textwidth}     {+7.00in}
+\setlength{\topmargin}     {+0.00in}
+\setlength{\textheight}    {+8.50in}
+%=============================================================================
+\makeatletter
+\renewcommand{\baselinestretch}{1.2}
+\normalsize
+%=============================================================================
+
+%==============================================================================
+\pagestyle{plain}
+%
+\date{}
+
+\begin{document}
+
+
+	%==============================================================================
+	\begin{flushleft}
+		\large \bf
+		Homework 8 \\
+	\end{flushleft}
+	%==============================================================================
+{\bf
+Please note that handwritten assignments will not be graded. To fill out your homework, use either the Latex template or the Word template (filled out in Word or another text editor). Please do not alter the order or the spacing of questions (keep them on their own pages). When you submit to Gradescope, please indicate which pages of your submitted pdf contain the answers to each question. If you have any questions about the templates or submission process, you can reach out to the TAs on Piazza. This assignment is due at 23:59 on November 24th.
+}
+
+
+	\begin{enumerate}
+
+		\item ($10 + 10$)
+		Concern a 5-card hand from a standard 52-card deck. A standard deck has 13 cards from each of 4 suits. The 13 cards have face value 2 through 10, jack, queen, king, or ace. Each face value is a ``kind" of card. The jack, queen, and king are ``face cards."
+		\begin{enumerate}[a.]
+			\item How many hands contain three spades and two hearts?
+
+			$C(13,2) \times C(13,3)$\\
+			$286 \times 78 = 22308$
+
+			\item How many hands contain two pairs $\left( \right.$that is, two pairs of two different kinds plus a fifth card of some third kind$\left. \right)$?
+
+			$C(13, 2) = 78$\\
+			$C(4,2) = 6$\\
+			$C(4,2) = 6$\\
+			$C(44,1)= 44$\\
+			$78 \times 6 \times 6 \times 44 = 123,552$
+		\end{enumerate}
+		% write your answer here
+
+
+
+		\newpage
+		\item ($5 \times 3 + 10$)
+		Let $A$ be the set of all strings of decimal digits of length five. For example $00312$ and $19483$ are strings in $A$.
+		\begin{enumerate}[a.]
+			\item How many strings in $A$ begin with $774$?
+
+			$10^2 = 100$
+
+			\item How many strings in $A$ have exactly one $8$?
+
+			$5 \times 9^4 = 32,805$
+
+			\item How many strings in $A$ have exactly three $6$'s?
+
+			${5 \choose 3} \times 9^2 = 810$
+
+			\item How many strings in $A$ have the digits in a strictly increasing order? For example 02357 and 14567 are such strings, but 31482 and 12335 are not.
+
+
+			Because there are $10$ digits as possible choices, and we need to choose $5$ for our string, there are $C(10,5)$ options that would result in increase digits.
+
+			$252$
+		\end{enumerate}
+
+		\newpage
+		\item ($5 + 10 + 10$)
+		A donut shop sells $30$ kinds of donuts, where donuts of the same kind are indistinguishable, and there are at least 12 donuts of each kind. In how many ways can you
+		\begin{enumerate}[a.]
+			\item get a bag of $12$ donuts?
+
+			${30 \choose 12} = 86,493,225$
+
+			\item get a bag of $12$ donuts if you want at least $3$ glazed donuts and at least $4$ raspberry donuts?
+
+			${30 \choose 5} = 142,506$
+
+			\item get a bag of $12$ donuts if you want exactly $3$ glazed donuts and exactly $4$ raspberry donuts?
+
+			${28 \choose 5} = 98,280$
+		\end{enumerate}
+
+		\newpage
+		\item ($10 \times 3$)
+		\begin{enumerate}[a.]
+			\item
+			In how many different ways can you seat 11 dogs and 8 cats in a circle?
+
+			$18! = 6,402,373,705,728,000$
+
+			\item
+			In how many different ways can you seat 11 dogs and 8 cats in a row if the dogs all sit together and the cats all sit together?
+
+			There are $11!$ ways to organize the dogs, $8!$ ways to organize the cats, and you can put either all of the dogs or all of the cats first.
+
+			$11! \times 8! \times 2 = 3,218,890,752,000$
+			\item
+			In how many different ways can you seat 11 dogs and 8 cats in a row if no 2 cats are to sit together?
+
+			If we are to use the dogs as the ``walls'' similar to how we did in class, there are $11+1$ compartments and $8$ items to be put between them. Assuming the dogs and cats are distinguishable, there are ${12 \choose 8} \times 11! \times 8!$ ways to organize them while following the restrictions.
+
+			$796,675,461,120,000$
+		\end{enumerate}
+				% write your answer here
+	\end{enumerate}
+\end{document}
+%==============================================================================
