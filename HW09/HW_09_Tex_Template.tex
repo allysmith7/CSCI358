@@ -1,0 +1,192 @@
+%=============================================================================
+\documentclass[12pt]{article}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage[caption=false]{subfig}
+\usepackage{enumerate}
+
+%=============================================================================
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\oddsidemargin} {-0.25in}
+\setlength{\textwidth}     {+7.00in}
+\setlength{\topmargin}     {+0.00in}
+\setlength{\textheight}    {+8.50in}
+%=============================================================================
+\makeatletter
+%\renewcommand{\baselinestretch}{1.2}
+\normalsize
+%=============================================================================
+
+%==============================================================================
+\pagestyle{plain}
+%
+\date{}
+\begin{document}
+	%==============================================================================
+	\begin{flushleft}
+		\large \bf
+		Homework 9 \\
+	\end{flushleft}
+	%==============================================================================
+{\bf
+Please note that handwritten assignments will not be graded. To fill out your homework, use either the Latex template or the Word template (filled out in Word or another text editor). Please do not alter the order or the spacing of questions (keep them on their own pages). When you submit to Gradescope, please indicate which pages of your submitted pdf contain the answers to each question. If you have any questions about the templates or submission process, you can reach out to the TAs on Piazza. This assignment is due at 23:59 on December 8th.
+}
+
+
+
+
+	\begin{enumerate}
+
+		\item ($4 \times 3$)
+		What is the probability that
+		\begin{enumerate}[a.]
+			\item a randomly selected day of the year (with 366 days) is in May?
+
+			$\frac{31}{366}$
+
+			\item a fair coin lands Heads 4 times out of 5 flips?
+
+			$(\frac{1}{2})^4 = \frac{1}{16}$
+
+			\item a five-card poker hand contains a straight flush, that is, five cards of the same suit of consecutive kinds?
+
+			$ \frac{40}{2598960}$
+		\end{enumerate}
+
+
+
+	\newpage
+		\item ($4 \times 4$)
+		Suppose you and a friend each choose at random an integer between $1$ and $8$, inclusive. For example, some possibilities are $(3, 7)$, $(7, 3)$, $(4, 4)$, $(8, 1)$, where your number is written first and your friend's number second. Find the following probabilities:
+		\begin{enumerate}[a.]
+			\item $p(\text{you pick $5$ and your friend picks $8$})$.
+
+			$\frac{1}{8} \times \frac{1}{8} = \frac{1}{64}$
+
+			\item $p(\text{sum of the two numbers picked is $<4$})$.
+
+			$\frac{4}{64} = \frac{1}{16}$
+
+			\item $p(\text{both numbers match})$.
+
+			$\frac{1}{8}$
+
+			\item $p(\text{your number is greater than your friend's number})$.
+
+			$\frac{28}{64}$
+		\end{enumerate}
+
+			\newpage
+		%\item ($4
+		\item ($4 \times 3$)
+		Suppose that you have $40$ different books ($20$ math books, $15$ history books, and $5$ geography books).
+		\begin{enumerate}[a.]
+			\item You pick one book at random. What is the probability that the book is not a geography book?
+
+			$\frac{7}{8}$
+
+			\item You pick two books at random. What is the probability that both books are history books?
+
+			$\frac{15}{40} \times \frac{14}{39} = \frac{210}{1560} = \frac{7}{52}$
+
+			\item You pick two books at random. What is the probability that the two books are from different disciplines?
+
+			$\frac{20}{40} \times \frac{15}{39} + \frac{20}{40} \times \frac{5}{39} + \frac{15}{40} \times \frac{5}{39} = \frac{95}{312}$
+		\end{enumerate}
+
+			\newpage
+		\item ($5 \times 4$)
+		Suppose that you want to pick a binary string (a string consisting of only 1's and 0's) from the set of all binary strings of length ten.
+		\begin{enumerate}[a.]
+			\item What is the probability that the binary string has exactly two 1's?
+
+			$\frac{45}{1024}$
+
+			\item What is the probability that the binary string has exactly two 1's, given that the string begins with a 1?
+
+			$\frac{9}{512}$
+
+			\item What is the probability that the binary string has more 0's than 1's?
+
+			$ {10 \choose 6} + {10 \choose 7} + {10 \choose 8} + {10 \choose 9} + {10 \choose 10} = 386$
+
+			$\frac{386}{1024}$
+
+			\item What is the probability that the binary string has the sum of its digits equal to seven?
+
+			$ {10 \choose 7} = 120$
+
+			$ \frac{120}{1024}$
+
+		\end{enumerate}
+
+			\newpage
+		\item ($4 \times 5$)
+		Suppose that an experiment consists of picking at random a binary string of length five. Consider the following events:
+		\begin{itemize}
+			\item $E_1$: the binary string chosen begins with 1;
+			\item $E_2$: the binary string chosen ends with 1;
+			\item $E_3$: the binary string chosen has exactly three 1's.
+		\end{itemize}
+		Please answer the following questions.
+		\begin{enumerate}[a.]
+			\item Find $p(E_1|E_3)$.
+
+			$ (\frac{1}{2} \times \frac{10}{32})/\frac{10}{32} = \frac{1}{2}$
+
+			\item Find $p(E_3|E_2)$.
+
+			$ \frac{6}{32}/\frac{1}{2} = \frac{12}{32}$
+
+			\item Find $p(E_3|E_1 \wedge E_2)$.
+
+			$ \frac{3}{32}/(\frac{1}{2}\times\frac{1}{2}) = \frac{12}{32}$
+			\item Determine whether $E_1$ and $E_2$ are independent.
+
+			$p(E_1 \cap E_2) = \frac{1}{4}$
+
+			$p(E_1) = \frac{1}{2}, p(E_2) = \frac{1}{2}$
+
+			They are independent.
+
+			\item Determine whether $E_2$ and $E_3$ are independent.
+
+			$p(E_2 \cap E_3) = \frac{6}{32}$
+
+			$p(E_2) = \frac{1}{2}, p(E_3) = {10}{32}$
+
+			$\frac{6}{32} \neq \frac{1}{2} \times \frac{10}{32}$
+
+			They are not independent.
+		\end{enumerate}
+
+					\newpage
+		\item ($5 \times 2$)
+		Suppose that we have two urns, and urn 1 contains $2$ blue tokens and $8$ red tokens; urn 2 contains $12$ blue tokens and $3$ red tokens. Please answer the following two questions.
+		\begin{enumerate}[a.]
+			\item You pick an urn at random and draw out a token at random from that urn. Given that the token is blue, what is the probability that the token came from urn 1?
+
+			$\frac{2}{14}$
+			\item You roll a dice to determine which urn to choose: if you roll a $1$ or $2$ you choose urn 1, otherwise you choose urn 2. Once the urn is chosen, you draw out a token at random from that urn. Given that the token is blue, what is the probability that it is from urn 1?
+			$(\frac{2}{6} \times \frac{2}{10})/\frac{14}{25} = \frac{5}{42}$
+		\end{enumerate}
+
+					\newpage
+		\item ($5 \times 2$)
+		Please answer the following questions to calculate the expected values of random distributions.
+		\begin{enumerate}[a.]
+			\item You have seven cards, numbered $3$ through $9$, and you pick one at random. If you pick a card with a prime number, you get $1$ point; if you pick a card with a composite number, you lose $1$ point. Find the expected value of the number of points you get.
+
+			$\frac{-1}{7}$
+			\item You flip a fair coin. If it is head, you lose $1$ point. If it is tail, you flip the coin again, and lose $1$ point if it is head and get 3 points if it is tail. What is the expected value of the number of points you get when you play this game.
+
+			$\frac{1}{2} \times -1 + \frac{1}{2}(\frac{1}{2}\times -1 + \frac{1}{2} \times 3) = 0$
+		\end{enumerate}
+
+
+	\end{enumerate}
+\end{document}
+%==============================================================================
